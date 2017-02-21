@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tela de cadastro</title>
+        <script>
+            function verificarSenha(){
+                var senha = document.getElementById("senha").value;
+                var senha2 = document.getElementById("resenha").value;
+                if (senha == senha2){
+                   alert("As senhas conferem!");
+                }
+                else{
+                   alert("senha diferente");
+                }
+            }
+            function checarCampo(valor)
+            { 
+                var regra = /^[0-9]+$/;
+                if (valor.match(regra)) {
+                    alert("é um caractere!");
+                }else{
+                    return 0;
+                 }
+            
+            }
+            function no(){
+                var nom = document.getElementById(nome).value;
+                if(nom=="Yuri"){
+                    document.getElementById(nome).style.backgroundColor = "red";
+                }else{
+                    
+                }
+            }
+        
+        </script>
+    </head>
+    <body>
+        <h1>Seja bem vindo a tela de cadastro</h1>
+        <h2>Cadastre o seu nome nos campos abaixo</h2>
+        <form>
+            <input type="text" name="nome" id="nome" placeholder="Nome" onblur ="no()"><br>
+            <input type="text" name="email" id="email" placeholder="Email" onfocus='document.getElementById("email").style.backgroundColor = "yellow"'><br>
+            <input type="text" name="endereco" id="endereco" placeholder="Endereço" onfocus='document.getElementById("endereco").style.backgroundColor = "yellow"'><br>
+            <input type="text" name="telefone" id="telefone" placeholder="Telefone" onfocus='document.getElementById("telefone").style.backgroundColor = "yellow"'><br>
+            <input type="password" name="senha" id="senha" placeholder="Digite a senha" onfocus='document.getElementById("senha").style.backgroundColor = "yellow"'><br>
+            <input type="password" name="resenha" id="resenha" placeholder="Digite a senha novamente" onfocus='document.getElementById("resenha").style.backgroundColor = "yellow"' onblur="verificarSenha()"><br>
+           
+        </form>
+    </body>
+
+</html>
